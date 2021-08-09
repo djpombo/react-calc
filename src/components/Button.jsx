@@ -3,7 +3,7 @@ import React from 'react';
 import './Button.css';
 
 
-export default props =>{
+const Button = props =>{
 
     
     return(
@@ -18,3 +18,4 @@ export default props =>{
     `}>{props.label}</button>
     );
 }
+export default Button;

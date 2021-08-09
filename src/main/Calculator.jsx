@@ -25,7 +25,7 @@ export default class Calculator extends Component {
     }
 
     clearMemory() {
-        //console.log('Limpar');
+
         this.setState({ ...initialDisplay })
     }
 
@@ -33,7 +33,6 @@ export default class Calculator extends Component {
         if (this.state.current === 0) {
             this.setState({ operation, clearDisplay: true, current: 1 });
         } else {
-            console.log(this.state.current)
             const equals = operation === '=';
             const currentOperation = this.state.operation
 
@@ -56,6 +55,7 @@ export default class Calculator extends Component {
                         values[0] = values[0] / values[1];
                         break;
                     }
+                    break;
                 default: break;
             }
 
@@ -85,8 +85,6 @@ export default class Calculator extends Component {
 
         const displayValue = currentValue + n;
 
-        console.log(displayValue)
-
         this.setState({ displayValue, clearDisplay: false });
 
         if (n !== '.') {
@@ -95,7 +93,7 @@ export default class Calculator extends Component {
             const values = [...this.state.values];
             values[i] = newValue;
             this.setState({ values });
-            console.log(values);
+            
         }
     }
 

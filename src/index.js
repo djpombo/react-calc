@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <h1>React Calc</h1>
+      <h1>React - Calc</h1>
       <Calculator />
       <span>C- 2021 Pixeloko Studio</span>
     </div>
